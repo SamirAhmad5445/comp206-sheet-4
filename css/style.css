@@ -1,6 +1,377 @@
-body {
-  color: rebeccapurple;
+:root {
+  --primary: hsl(210, 100%, 60%);
+  --neutral: hsl(187, 43%, 96%);
+  --accent: hsl(128, 50%, 55%);
+  --light: hsl(210, 100%, 100%);
+  --dark: hsl(187, 0%, 0%);
+  --muted: hsl(0, 0%, 30%);
 }
-body h1 {
-  color: hsl(200, 100%, 70%);
-}/*# sourceMappingURL=style.css.map */
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--neutral);
+  color: var(--dark);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+[contenteditable] {
+  display: inline-block;
+  min-width: 2rem;
+  letter-spacing: 0.125rem;
+  outline: transparent;
+  caret-color: var(--accent);
+}
+
+.container {
+  max-width: 62ch;
+  margin-inline: auto;
+  padding-inline: var(--container-padding, 1.5rem);
+}
+
+.flow-1 > * + * {
+  -webkit-margin-before: 1rem;
+  margin-block-start: 1rem;
+}
+
+.flow-2 > * + * {
+  -webkit-margin-before: 2rem;
+  margin-block-start: 2rem;
+}
+
+.flow-3 > * + * {
+  -webkit-margin-before: 3rem;
+  margin-block-start: 3rem;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-sm {
+  font-size: 0.75rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.5rem;
+}
+
+.text-ex {
+  font-size: 3rem;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-neutral {
+  background-color: var(--neutral);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
+.bg-light {
+  background-color: var(--light);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-muted {
+  background-color: var(--muted);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+.text-neutral {
+  color: var(--neutral);
+}
+.text-accent {
+  color: var(--accent);
+}
+.text-light {
+  color: var(--light);
+}
+.text-dark {
+  color: var(--dark);
+}
+.text-muted {
+  color: var(--muted);
+}
+
+.m-0 {
+  margin: 0.125rem;
+}
+
+.p-0 {
+  padding: 0.125rem;
+}
+
+.radius-0 {
+  border-radius: 0.125rem;
+}
+
+.border-0 {
+  border-width: 0.125rem;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.radius-1 {
+  border-radius: 0.25rem;
+}
+
+.border-1 {
+  border-width: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.radius-2 {
+  border-radius: 0.5rem;
+}
+
+.border-2 {
+  border-width: 0.5rem;
+}
+
+.m-3 {
+  margin: 1rem;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.radius-3 {
+  border-radius: 1rem;
+}
+
+.border-3 {
+  border-width: 1rem;
+}
+
+.m-4 {
+  margin: 1.5rem;
+}
+
+.p-4 {
+  padding: 1.5rem;
+}
+
+.radius-4 {
+  border-radius: 1.5rem;
+}
+
+.border-4 {
+  border-width: 1.5rem;
+}
+
+.m-5 {
+  margin: 2rem;
+}
+
+.p-5 {
+  padding: 2rem;
+}
+
+.radius-5 {
+  border-radius: 2rem;
+}
+
+.border-5 {
+  border-width: 2rem;
+}
+
+.m-6 {
+  margin: 3rem;
+}
+
+.p-6 {
+  padding: 3rem;
+}
+
+.radius-6 {
+  border-radius: 3rem;
+}
+
+.border-6 {
+  border-width: 3rem;
+}
+
+:where([class*="border"]) {
+  border: 0.125rem solid var(--muted);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+.border-neutral {
+  border-color: var(--neutral);
+}
+.border-accent {
+  border-color: var(--accent);
+}
+.border-light {
+  border-color: var(--light);
+}
+.border-dark {
+  border-color: var(--dark);
+}
+.border-muted {
+  border-color: var(--muted);
+}
+.border:is(.border-none) {
+  border: none;
+}
+
+.btn {
+  --bg: var(--primary);
+  --base: var(--neutral);
+  background-color: var(--bg);
+  color: var(--base);
+  padding: 0.25rem 1.25rem;
+  margin: 0.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+}
+.btn-primary {
+  --bg: var(--primary);
+}
+.btn-neutral {
+  --bg: var(--neutral);
+}
+.btn-accent {
+  --bg: var(--accent);
+}
+.btn-light {
+  --bg: var(--light);
+}
+.btn-dark {
+  --bg: var(--dark);
+}
+.btn-muted {
+  --bg: var(--muted);
+}
+.btn:is(:hover, :focus-visible) {
+  opacity: 0.9;
+}
+
+.form-input {
+  --base: var(--dark);
+  display: inline-block;
+  margin-block: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 0.0625rem solid var(--base);
+  border-radius: 0.25rem;
+  background-color: var(--light);
+  color: var(--dark);
+  caret-color: var(--base);
+}
+.form-input-primary {
+  --base: var(--primary);
+}
+.form-input-neutral {
+  --base: var(--neutral);
+}
+.form-input-accent {
+  --base: var(--accent);
+}
+.form-input-light {
+  --base: var(--light);
+}
+.form-input-dark {
+  --base: var(--dark);
+}
+.form-input-muted {
+  --base: var(--muted);
+}
+.form-input:where([readonly]) {
+  outline: transparent;
+  opacity: 0.8;
+  cursor: default;
+} /*# sourceMappingURL=style.css.map */

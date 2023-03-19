@@ -16,6 +16,49 @@
     <script defer src="./solution.js"></script>
   </head>
   <body>
-    <h1>Hello Sheet 4</h1>
+    <div style="max-width: 92ch; margin-inline: auto; padding: 0 2rem">
+      <form>
+        <label>
+          ID: <input type="text" name="Enter ID" id="studentId" />
+        </label>
+        <label>
+          name: <input type="text" name="Enter name" id="studentName" />
+        </label>
+        <label>
+          program:
+          <select name="program" id="program">
+            <option value="cs">cs</option>
+            <option value="cs-math">cs-math</option>
+            <option value="cs-stat">cs-stat</option>
+            <option value="cs-physics">cs-physics</option>
+          </select>
+        </label>
+        <button id="insert">insert</button>
+        <button id="show">show</button>
+      </form>
+      <hr />
+      <div class="output"></div>
+    </div>
+
+    <hr />
+
+    <div>
+      <form
+        style="display: grid; grid-auto-flow: row; max-width: 46ch"
+        action="back.php"
+        method="user"
+        onsubmit="return validate(this)"
+      >
+        <label> First Name <input type="text" id="firstName" /> </label>
+        <label> Family Name <input type="text" id="familyName" /> </label>
+        <label> Department <input type="text" id="department" /></label>
+        <label> salary <input type="text" id="salary" /></label>
+        <label> age <input type="number" id="age" /></label>
+        <label>
+          mobile <input type="text" id="phone" pattern="[0-9]{11,11}"
+        /></label>
+        <button class="btn btn-primary">sign up</button>
+      </form>
+    </div>
   </body>
 </html>

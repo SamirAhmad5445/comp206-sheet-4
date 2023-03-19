@@ -1,0 +1,27 @@
+<header class="main-title">
+      <h1>Sheet 4</h1>
+      <h2>Java Script BOM & DOM Objects</h2>
+    </header>
+    <main class="container">
+      <section class="question-1">
+        <h3 class="question-title">question 1</h3>
+        <div class="question-card">
+          <div class="heading-changer">
+            <h1>Lorem, ipsum dolor.</h1>
+            <h1>Non, perspiciatis?</h1>
+            <h1>Asperiores, perspiciatis.</h1>
+            <h1>Vitae, cupiditate odio.</h1>
+            <h1>Repellat, corporis iure.</h1>
+          </div>
+        </div>
+        <div class="question-card">
+          <div class="paragraph-counter">
+            <p>Lorem, ipsum dolor.</p>
+            <p>Non, perspiciatis?</p>
+            <p>Asperiores, perspiciatis.</p>
+            <p>Vitae, cupiditate odio.</p>
+            <p>Repellat, corporis iure.</p>
+          </div>
+        </div>
+      </section>
+    </main>
